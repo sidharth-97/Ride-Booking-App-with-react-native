@@ -1,50 +1,56 @@
-# Welcome to your Expo app 👋
+# Ride-Booking App with Expo
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project is a Ride-Booking App built with React Native and Expo. It includes features like maps integration, location services, bottom navigation, and more. The project leverages modern tools like Expo Router, TypeScript, Tailwind CSS, and Zustand for state management.
 
-## Get started
 
-1. Install dependencies
+---
 
+## Features
+- Map integration using `react-native-maps`.
+- Directions and route calculation with `react-native-maps-directions`.
+- Bottom navigation using `@react-navigation/bottom-tabs`.
+- Smooth animations with `react-native-reanimated`.
+- Tailwind CSS support via `nativewind`.
+- Authentication with `@clerk/clerk-expo`.
+- State management with `zustand`.
+- API calls using `@neondatabase/serverless`.
+
+---
+
+
+## Setup Instructions
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/sidharth-97/Ride-Booking-App-with-react-native.git
+   cd Ride-Booking-App-with-react-native
+   ```
+
+2. **Install Dependencies:**
    ```bash
    npm install
    ```
 
-2. Start the app
-
-   ```bash
-    npx expo start
+3. **Set Up Environment Variables:**
+   Create a `.env` file at the root of your project and add the required keys for services like Clerk, Stripe, and Neon. Example:
+   ```env
+   EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_api_key
+   EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+   STRIPE_SECRET_KEY=your_stripe_secret_key
+   DATABASE_URL=your_neon_api_key
+   EXPO_PUBLIC_SERVER_URL=your_server_url
+   EXPO_PUBLIC_GEOAPIFY_API_KEY=your_geoapify_api_key
+   EXPO_PUBLIC_GOOGLE_API_KEY=your_google_api_key
    ```
 
-In the output, you'll find options to open the app in a
+4. **Start the Development Server:**
+   ```bash
+   npm run start
+   ```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+5. **Run on Specific Platforms:**
+   - Android: `npm run android`
+   - iOS: `npm run ios`
+   - Web: `npm run web`
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
